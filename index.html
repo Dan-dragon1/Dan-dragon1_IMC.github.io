@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora IMC</title>
+    <link rel="icon" href="Images/logo.png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="text/javascript" src="JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="JS/code.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Caladea&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+    <center>
+    <header>
+        <nav class="titulo">
+            <h1><big><b>BODY MASS INDEX</b></big></h1>
+        </nav>
+    </header>
+    <main class="container p-4">
+        <div>
+            <form action="" class="formulario">
+                <div class="formulario_titulo">
+                    <h1 class="formulario_titulo">
+                        Calculadora IMC
+                    </h1>
+                    <p class="formulario_descripcion">
+                        Para un cálculo correcto necesitamos algo de información básica sobre ti
+                    </p>
+                </div>
+                <label for="" class="formulario_label">¿Cuál es su peso(Kg)?:</label>
+                <input type="text" 
+                class="formulario_input" 
+                placeholder="Inserte su peso aqui" 
+                id="form_peso" 
+                maxlength="5" 
+                data-decimals="true" 
+                pattern="[0-9]*">
+                <label for="" class="formulario_label">¿Cuál es su estatura(cm)?:</label>
+                <input type="text" 
+                class="formulario_input" 
+                placeholder="Inserte su estatura" 
+                id="form_altura" 
+                maxlength="3"
+                data-decimals="false"
+                data-factor="100.0" 
+                pattern = "[0-9]*">
+                <button type="button" class="formulario_submit " onclick="calculate_imc()">Calcular</button>
+            </form>
+        </div>
+ 
+        <div class="resultado">  
+            <h3 class="card-header">Intervalo de Índice de Masa Corporal</h3>   
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm"> 
+                        <!-- Cuadro de Resultados -->
+                            <table class="table1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Clasificación</th>
+                                        <th scope="col">IMC</th>
+                                        <th scope="col">Riesgo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="bajopeso">
+                                        <td>Bajo de Peso</td>
+                                        <td>Menos de 18.5</td>
+                                        <td>Aumentado</td> 
+                                    </tr>
+                                    <tr id="normal">
+                                        <td>Peso normal</td>
+                                        <td>18.5 - 24.9</td>
+                                        <td>Saludable</td>   
+                                    </tr>
+                                    <tr id="sobrepeso">
+                                        <td>Sobrepeso</td>
+                                        <td>25.0 - 29.9</td>
+                                        <td>Aumentado</td>
+                                    </tr>
+                                    <tr id="obeso">
+                                        <td>Obesidad Grado I</td>
+                                        <td>30.0 - 34.9</td>
+                                        <td>Moderado</td>  
+                                    </tr>
+                                    <tr id="obeso">
+                                        <td>Obesidad Grado II</td>
+                                        <td>35.0 - 39.9</td>
+                                        <td>Severo</td>  
+                                    </tr>
+                                    <tr id="obeso">
+                                        <td>Obesidad Grado III</td>
+                                        <td>Más de 40.0</td>
+                                        <td>Muy Severo</td>  
+                                    </tr>
+                                </tbody>
+                            </table>
+                        <!-- Fin del cuadro de Resultados -->
+                        </div>         
+                    </div>
+                </div>
+            </div>
+          <!-- Fin de sección de calculo -->
+        </div>
+        <div class="resultado" id="resultado_label">
+            <output id="salida_resultados"></output>
+        </div> 
+    </main>
+    <footer>
+        <div class="container">
+        <section class="contact">
+            <br>
+            <img src="Images/imc.png">
+        </section>
+                <section class="contact1">
+            <h3>SIGUEME EN MIS REDES </h3>
+                </section>
+                <section class="contact1">
+            <ul class="socialmedia">
+                    <div class="social-networks">
+                        <a href="https://www.facebook.com/danieitoltonconi" class="facebook" title="Sigueme en Facebook" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/daniel_tonconi.01/" class="instagram" title="Sigueme en Instagram" target="blank"><i class="fab fa-instagram"></i></a>
+
+                        <!--falta completar algunas redes sociales-->
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="google"><i class="fab fa-google-plus-g"></i></a>
+
+                    </div>
+            </ul>
+        </section>
+        <section class="Copyright">
+            <h3><b>Copyright © 2021 - Todos los derechos reservados</b></h3>   
+        </section>
+        </div>  
+    </footer>
+    </center>
+</body>
+</html>
